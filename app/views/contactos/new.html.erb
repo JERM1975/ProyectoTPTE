@@ -1,0 +1,14 @@
+<h1>Contactos#new</h1>
+<p>Find me in app/views/contactos/new.html.erb</p>
+
+<%= form_for(@contacto) do |f| %>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.text_field :email %>
+
+    <%= f.label :mensaje, style: "display: block" %>
+    <%= f.text_area :mensaje %>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>

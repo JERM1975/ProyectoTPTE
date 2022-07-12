@@ -1,0 +1,303 @@
+  [1m[35m (28.0ms)[0m  [1m[35mCREATE DATABASE `trasladosjerm_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE DATABASE `trasladosjerm_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE DATABASE `trasladosjerm_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE DATABASE `trasladosjerm_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for 127.0.0.1 at 2022-07-11 14:26:45 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 50.2ms | Allocations: 646)
+Completed 200 OK in 590ms (Views: 197.3ms | ActiveRecord: 0.0ms | Allocations: 5031)
+
+
+  [1m[35m (94.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('7171573118429305425', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateContactos (20220712134445)
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE `contactos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `mensaje` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220712134445')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-07-12 13:45:14.894232', '2022-07-12 13:45:14.894232')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('7171573118429305425')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:26:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/mnt/c/ED0045/trasladosjerm/app/controllers/contactos_controller.rb:16: syntax error, unexpected '}', expecting ')'
+... :created, location:(@contacto}
+...                              ^
+/mnt/c/ED0045/trasladosjerm/app/controllers/contactos_controller.rb:20: syntax error, unexpected `end', expecting ')'
+      end
+      ^~~
+/mnt/c/ED0045/trasladosjerm/app/controllers/contactos_controller.rb:26: syntax error, unexpected `end', expecting ')'):
+  
+app/controllers/contactos_controller.rb:16: syntax error, unexpected '}', expecting ')'
+app/controllers/contactos_controller.rb:20: syntax error, unexpected `end', expecting ')'
+app/controllers/contactos_controller.rb:26: syntax error, unexpected `end', expecting ')'
+app/controllers/contactos_controller.rb:16: syntax error, unexpected '}', expecting ')'
+app/controllers/contactos_controller.rb:20: syntax error, unexpected `end', expecting ')'
+app/controllers/contactos_controller.rb:26: syntax error, unexpected `end', expecting ')'
+app/controllers/contactos_controller.rb:16: syntax error, unexpected '}', expecting ')'
+app/controllers/contactos_controller.rb:20: syntax error, unexpected `end', expecting ')'
+app/controllers/contactos_controller.rb:26: syntax error, unexpected `end', expecting ')'
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:28:11 -0400
+Processing by ContactosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/new.html.erb within layouts/application
+  Rendered contactos/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1232)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 1329)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 10.3ms | Allocations: 7804)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Contactos#new</h1>
+<p>Find me in app/views/contactos/new.html.erb</p>
+
+<%= form_for(@contacto) do |f| %>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.text_field :email %>
+
+    <%= f.label :mensaje, style: "display: block" %>
+    <%= f.text_area : mensaje %>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<%= end %>
+):
+1:    <h1>Contactos#new</h1>
+2:    <p>Find me in app/views/contactos/new.html.erb</p>
+3:    
+4:    <%= form_for(@contacto) do |f| %>
+5:        <%= f.label :email, style: "display: block" %>
+6:        <%= f.text_field :email %>
+7:    
+8:        <%= f.label :mensaje, style: "display: block" %>
+9:        <%= f.text_area : mensaje %>
+10:    
+11:        <div>
+12:            <%= f.submit %>
+13:        </div>
+14:    <%= end %>
+  
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:9: syntax error, unexpected ':'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:30:09 -0400
+Processing by ContactosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/new.html.erb within layouts/application
+  Rendered contactos/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1252)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1348)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms | Allocations: 2194)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Contactos#new</h1>
+<p>Find me in app/views/contactos/new.html.erb</p>
+
+<%= form_for(@contacto) do |f| %>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.text_field :email %>
+
+    <%= f.label :mensaje, style: "display: block" %>
+    <%= f.text_area :mensaje %>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<%= end %>
+):
+1:    <h1>Contactos#new</h1>
+2:    <p>Find me in app/views/contactos/new.html.erb</p>
+3:    
+4:    <%= form_for(@contacto) do |f| %>
+5:        <%= f.label :email, style: "display: block" %>
+6:        <%= f.text_field :email %>
+7:    
+8:        <%= f.label :mensaje, style: "display: block" %>
+9:        <%= f.text_area :mensaje %>
+10:    
+11:        <div>
+12:            <%= f.submit %>
+13:        </div>
+14:    <%= end %>
+  
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:30:12 -0400
+Processing by ContactosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/new.html.erb within layouts/application
+  Rendered contactos/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1301)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 1593)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Contactos#new</h1>
+<p>Find me in app/views/contactos/new.html.erb</p>
+
+<%= form_for(@contacto) do |f| %>
+    <%= f.label :email, style: "display: block" %>
+    <%= f.text_field :email %>
+
+    <%= f.label :mensaje, style: "display: block" %>
+    <%= f.text_area :mensaje %>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<%= end %>
+):
+1:    <h1>Contactos#new</h1>
+2:    <p>Find me in app/views/contactos/new.html.erb</p>
+3:    
+4:    <%= form_for(@contacto) do |f| %>
+5:        <%= f.label :email, style: "display: block" %>
+6:        <%= f.text_field :email %>
+7:    
+8:        <%= f.label :mensaje, style: "display: block" %>
+9:        <%= f.text_area :mensaje %>
+10:    
+11:        <div>
+12:            <%= f.submit %>
+13:        </div>
+14:    <%= end %>
+  
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/contactos/new.html.erb:14: syntax error, unexpected `end'
+app/views/contactos/new.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:31:53 -0400
+Processing by ContactosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/new.html.erb within layouts/application
+  Rendered contactos/new.html.erb within layouts/application (Duration: 286.3ms | Allocations: 12767)
+  Rendered layout layouts/application.html.erb (Duration: 2263.1ms | Allocations: 106660)
+Completed 200 OK in 2289ms (Views: 2271.1ms | ActiveRecord: 0.0ms | Allocations: 107535)
+
+
+Started POST "/contactos" for 127.0.0.1 at 2022-07-12 10:32:24 -0400
+Processing by ContactosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contacto"=>{"email"=>"johnny.rojas.ing@gmail.com", "mensaje"=>"Hola quisiera cotizar un servicio"}, "commit"=>"Create Contacto"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+  [1m[36mContacto Create (3.3ms)[0m  [1m[32mINSERT INTO `contactos` (`email`, `mensaje`, `created_at`, `updated_at`) VALUES ('johnny.rojas.ing@gmail.com', 'Hola quisiera cotizar un servicio', '2022-07-12 14:32:24.929057', '2022-07-12 14:32:24.929057')[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+Redirected to http://127.0.0.1:3000/contactos/1
+Completed 302 Found in 31ms (ActiveRecord: 11.1ms | Allocations: 3845)
+
+
+Started GET "/contactos/1" for 127.0.0.1 at 2022-07-12 10:32:24 -0400
+Processing by ContactosController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/show.html.erb within layouts/application
+  Rendered contactos/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5060)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5149)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 5560)
+
+
+  
+ActionView::Template::Error (undefined method `to' for #<ActionView::Base:0x0000000000fc80>
+
+'.freeze;@output_buffer.append=( link to "regresar a la pagina de inicio", contactos_path );
+                                      ^^
+Did you mean?  t):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= link to "regresar a la pagina de inicio", contactos_path %>
+  
+app/views/contactos/show.html.erb:3
+Started GET "/contactos/new" for 127.0.0.1 at 2022-07-12 10:35:09 -0400
+Processing by ContactosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/new.html.erb within layouts/application
+  Rendered contactos/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 83.4ms | Allocations: 4186)
+Completed 200 OK in 112ms (Views: 95.5ms | ActiveRecord: 0.0ms | Allocations: 5035)
+
+
+Started POST "/contactos" for 127.0.0.1 at 2022-07-12 10:35:26 -0400
+Processing by ContactosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contacto"=>{"email"=>"johnny.rojas.ing@gmail.com", "mensaje"=>"Hola quisiera cotizar un servicio"}, "commit"=>"Create Contacto"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+  [1m[36mContacto Create (2.5ms)[0m  [1m[32mINSERT INTO `contactos` (`email`, `mensaje`, `created_at`, `updated_at`) VALUES ('johnny.rojas.ing@gmail.com', 'Hola quisiera cotizar un servicio', '2022-07-12 14:35:26.679056', '2022-07-12 14:35:26.679056')[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contactos_controller.rb:13:in `block in create'
+Redirected to http://127.0.0.1:3000/contactos/2
+Completed 302 Found in 21ms (ActiveRecord: 4.7ms | Allocations: 2518)
+
+
+Started GET "/contactos/2" for 127.0.0.1 at 2022-07-12 10:35:26 -0400
+Processing by ContactosController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/show.html.erb within layouts/application
+  Rendered contactos/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 386)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 2657)
+Completed 200 OK in 57ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 3040)
+
+
+Started GET "/contactos" for 127.0.0.1 at 2022-07-12 10:44:27 -0400
+Processing by ContactosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contactos/index.html.erb within layouts/application
+  Rendered contactos/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 2562)
+Completed 200 OK in 82ms (Views: 60.6ms | Allocations: 2882)
+
+
+  [1m[36mContacto Load (3.2ms)[0m  [1m[34mSELECT `contactos`.* FROM `contactos`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('7171573118429305425', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20220712160104)
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `codigo` varchar(255), `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220712160104')[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7171573118429305425')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m

@@ -1,0 +1,44 @@
+body {
+    font-family: Helvetica, Geneva, Arial, sans-serif;
+    font-size: small;
+    color: #000;
+    background-color: #fff;
+    }
+a:link, a:active, a:visited {
+    color: #CD0000;
+    }
+input { 
+    margin-bottom: 5px;
+    }
+p { 
+    line-height: 150%;
+    }
+div#container {
+    width: 80%;
+    margin: 0 auto;
+    }
+header#header {
+    text-align: center;
+    padding-bottom: 15px;
+    }
+div#content {
+    float: left;
+    width: 450px;
+    padding: 10px;
+    }
+div#content h3 {
+    margin-top: 15px;
+    }
+div#sidebar {
+    width: 200px;
+    margin-left: 480px;
+    }
+
+#recipes_title {
+    text-align: center;
+}
+
+footer {
+    text-align: center; 
+    font-family: 'Titillium Web', sans-serif; 
+}
